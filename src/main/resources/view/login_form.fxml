@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Pane" prefHeight="800.0" prefWidth="1083.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1100.0" pickOnBounds="true" styleClass="text-prompt">
+         <image>
+            <Image url="@../asset/main.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="37.0" layoutY="88.0" opacity="0.75" prefHeight="596.0" prefWidth="383.0" style="-fx-background-radius: 30; -fx-background-color: WHITE;">
+         <children>
+            <Label layoutX="37.0" layoutY="21.0" prefHeight="65.0" prefWidth="150.0" style="-fx-text-fill: #000000;" text="Login">
+               <font>
+                  <Font name="System Bold Italic" size="41.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsername" layoutX="71.0" layoutY="178.0" prefHeight="49.0" prefWidth="286.0" promptText="username" style="-fx-background-color: #8FBFBF;" stylesheets="@../style/style.css">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="text-prompt" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </TextField>
+            <TextField fx:id="txtPassword" layoutX="70.0" layoutY="260.0" prefHeight="49.0" prefWidth="286.0" promptText="Password" style="-fx-background-color: #8FBFBF;" stylesheets="@../style/style.css">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="text-prompt" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </TextField>
+            <Label layoutX="40.0" layoutY="75.0" prefHeight="21.0" prefWidth="136.0" text="Glad you’re back.!" textFill="#110000">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="chkbxRememberMe" layoutX="104.0" layoutY="316.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="150.0" text="Remember Me" />
+            <Button layoutX="81.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="49.0" prefWidth="248.0" styleClass="loginbtn" text="LOGIN">
+               <font>
+                  <Font name="Cambria Bold" size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="87.0" fitWidth="94.0" layoutX="289.0" layoutY="21.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asset/Group.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="133.0" layoutY="472.0" prefHeight="21.0" prefWidth="163.0" text="Forgot password ?">
+               <font>
+                  <Font name="Cambria Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="57.0" fitWidth="55.0" layoutX="12.0" layoutY="173.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asset/username.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="55.0" layoutX="12.0" layoutY="258.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asset/icons8-password-64.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="109.0" layoutY="517.0" mnemonicParsing="false" onAction="#btnCreateanAccountOnAction" prefHeight="40.0" prefWidth="190.0" styleClass="loginbtn" text="Create An Account">
+               <font>
+                  <Font name="Cambria Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ProductPageController">
+   <children>
+      <ImageView fitHeight="735.0" fitWidth="926.0" layoutX="-1.0" layoutY="-1.0" opacity="0.38" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/image.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="15.0" layoutY="127.0" opacity="0.9" prefHeight="200.0" prefWidth="900.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button layoutX="62.0" layoutY="146.0" mnemonicParsing="false" onAction="#AddOnAction" prefHeight="32.0" prefWidth="90.0" styleClass="btn" text="Add">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="247.0" layoutY="147.0" mnemonicParsing="false" onAction="#UpadateOnAction" prefHeight="32.0" prefWidth="90.0" styleClass="btn" text="Upadate">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="430.0" layoutY="147.0" mnemonicParsing="false" onAction="#DeleteOnAction" prefHeight="32.0" prefWidth="90.0" styleClass="btn" text="Delete">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="633.0" layoutY="147.0" mnemonicParsing="false" onAction="#ClearOnAction" prefHeight="32.0" prefWidth="90.0" styleClass="btn" text="Clear">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtqty" layoutX="234.0" layoutY="37.0" prefHeight="34.0" prefWidth="162.0" promptText="Qty" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtdescription" layoutX="422.0" layoutY="37.0" prefHeight="34.0" prefWidth="155.0" promptText="description" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txti_id" layoutX="43.0" layoutY="37.0" onAction="#searchIdOnAction" prefHeight="34.0" prefWidth="155.0" promptText="Item_Id" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txto_id" layoutX="591.0" layoutY="37.0" prefHeight="31.0" prefWidth="173.0" promptText="O_ID" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <TableView fx:id="tblproduct" layoutX="12.0" layoutY="351.0" prefHeight="245.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="colitem_id" prefWidth="173.0" text="Item_Id" />
+            <TableColumn fx:id="colqty" prefWidth="199.0" text="Qty" />
+            <TableColumn fx:id="coldescription" prefWidth="205.0" text="description" />
+            <TableColumn fx:id="colo_id" prefWidth="322.0" text="O_ID" />
+         </columns>
+      </TableView>
+      <TextField layoutY="3.0" prefHeight="48.0" prefWidth="925.0" style="-fx-background-color: #8FBFBF;" styleClass="lablebtn" stylesheets="@../style/style.css" text="ITEM DETAILS">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

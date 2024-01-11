@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="728.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentDateilsController">
+   <children>
+      <ImageView fitHeight="735.0" fitWidth="926.0" layoutX="-2.0" layoutY="-5.0" opacity="0.43" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/image.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblpayment" layoutX="47.0" layoutY="250.0" prefHeight="395.0" prefWidth="863.0">
+         <columns>
+            <TableColumn fx:id="colp_id" prefWidth="123.00003051757812" text="Payment Id" />
+            <TableColumn fx:id="coltime" prefWidth="143.0" text="Time" />
+            <TableColumn fx:id="coldate" prefWidth="172.0" text="Date" />
+            <TableColumn fx:id="colamount" prefWidth="168.0" text="Amount" />
+            <TableColumn fx:id="cola_id" prefWidth="254.0" text="A_id" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

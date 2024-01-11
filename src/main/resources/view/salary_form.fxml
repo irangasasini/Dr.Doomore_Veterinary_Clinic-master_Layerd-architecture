@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SalaryFormController">
+   <children>
+      <ImageView fitHeight="735.0" fitWidth="926.0" opacity="0.38" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/main.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="13.0" layoutY="99.0" opacity="0.9" prefHeight="200.0" prefWidth="904.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button layoutX="62.0" layoutY="146.0" mnemonicParsing="false" onAction="#AddOnAction" prefHeight="32.0" prefWidth="90.0" styleClass="btn" text="Add">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="247.0" layoutY="147.0" mnemonicParsing="false" onAction="#UpadateOnAction" prefHeight="34.0" prefWidth="104.0" styleClass="btn" text="Upadate">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="430.0" layoutY="147.0" mnemonicParsing="false" onAction="#DeleteOnAction" prefHeight="32.0" prefWidth="90.0" styleClass="btn" text="Delete">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="633.0" layoutY="147.0" mnemonicParsing="false" onAction="#ClearOnAction" prefHeight="32.0" prefWidth="90.0" styleClass="btn" text="Clear">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtsalary_id" layoutX="24.0" layoutY="20.0" onAction="#searchIdOnAction" prefHeight="34.0" prefWidth="104.0" promptText="Salary_Id" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtE_id" layoutX="195.0" layoutY="20.0" prefHeight="31.0" prefWidth="173.0" promptText="e_ID" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lbltime" alignment="TOP_CENTER" layoutX="452.0" layoutY="24.0" prefHeight="34.0" prefWidth="67.0" text="Time">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="lbldate" alignment="TOP_CENTER" layoutX="555.0" layoutY="24.0" prefHeight="34.0" prefWidth="123.0" text="Date">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tblsalary" layoutX="12.0" layoutY="323.0" prefHeight="376.0" prefWidth="904.0">
+         <columns>
+            <TableColumn fx:id="colsalaryid" prefWidth="173.0" text="Salary_Id" />
+            <TableColumn fx:id="coltime" prefWidth="322.0" text="Time" />
+            <TableColumn fx:id="colDate" prefWidth="193.0" text="Date" />
+            <TableColumn fx:id="colE_id" prefWidth="215.0" text="e_ID" />
+         </columns>
+      </TableView>
+      <TextField layoutY="1.0" prefHeight="48.0" prefWidth="926.0" style="-fx-background-color: #8FBFBF;" styleClass="lablebtn" stylesheets="@../style/style.css" text="SALARY DETAILS">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

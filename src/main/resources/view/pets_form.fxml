@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PetsFormController">
+   <children>
+      <ImageView fitHeight="735.0" fitWidth="926.0" layoutX="-5.0" opacity="0.39" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/main.jpg" />
+         </image>
+      </ImageView>
+      <TextField layoutX="-1.0" layoutY="1.0" prefHeight="48.0" prefWidth="921.0" style="-fx-background-color: #8FBFBF;" styleClass="lablebtn" stylesheets="@../style/style.css" text="PETS DETAILS">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </TextField>
+      <Pane layoutX="10.0" layoutY="138.0" opacity="0.9" prefHeight="200.0" prefWidth="896.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button layoutX="78.0" layoutY="145.0" mnemonicParsing="false" onAction="#AddOnAction" prefHeight="32.0" prefWidth="80.0" styleClass="btn" text="Add">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="254.0" layoutY="145.0" mnemonicParsing="false" onAction="#UpadateOnAction" prefHeight="32.0" prefWidth="80.0" styleClass="btn" text="Upadate">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="444.0" layoutY="145.0" mnemonicParsing="false" onAction="#DeleteOnAction" prefHeight="32.0" prefWidth="80.0" styleClass="btn" text="Delete">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="625.0" layoutY="145.0" mnemonicParsing="false" onAction="#ClearOnAction" prefHeight="32.0" prefWidth="80.0" styleClass="btn" text="Clear">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtname" layoutX="180.0" layoutY="37.0" prefHeight="34.0" prefWidth="162.0" promptText="Name" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtage" layoutX="358.0" layoutY="37.0" prefHeight="34.0" prefWidth="155.0" promptText="Age" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtpet_id" layoutX="10.0" layoutY="38.0" onAction="#searchIdOnAction" prefHeight="34.0" prefWidth="155.0" promptText="Pet Id" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtbreed" layoutX="523.0" layoutY="37.0" prefHeight="36.0" prefWidth="96.0" promptText="Breed" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtc_id" layoutX="636.0" layoutY="36.0" prefHeight="36.0" prefWidth="96.0" promptText="C_id" styleClass="lablebtn">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <TableView fx:id="tblpets" layoutX="11.0" layoutY="354.0" prefHeight="367.0" prefWidth="896.0">
+         <columns>
+            <TableColumn fx:id="colpet_id" prefWidth="124.0" text="Pet Id" />
+            <TableColumn fx:id="colname" prefWidth="141.0" text="Name" />
+            <TableColumn fx:id="colage" prefWidth="247.0" text="Age" />
+            <TableColumn fx:id="cokbreed" prefWidth="190.0" text="Breed" />
+            <TableColumn fx:id="colc_id" prefWidth="193.0" text="c_id" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
